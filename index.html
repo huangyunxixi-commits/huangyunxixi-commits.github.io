@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黄韵熹 - 个人作品集</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 头部个人信息 -->
+    <header class="header">
+        <img src="./images/avatar.jpg" alt="我的头像" class="avatar">
+        <h1>黄韵熹</h1>
+        <p>设计师/美工/插画师/前端爱好者</p>
+    </header>
+
+    <!-- 作品集区域 -->
+    <section class="works">
+        <h2>我的作品</h2>
+        <!-- 书本封面设计作品卡片，缩略图用work1-p1 -->
+        <div class="work-item" onclick="openModal(1)">
+            <img src="./images/work1-p1.jpg" alt="书本封面设计缩略图">
+            <h3>书本封面设计</h3>
+            <p>系列书籍封面整套视觉设计，点击查看完整系列图</p>
+        </div>
+
+        <!-- 弹窗轮播结构，总页数改为8 -->
+        <div id="modal" class="modal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <span class="prev-btn" onclick="changePage(-1)">&lsaquo;</span>
+            <span class="next-btn" onclick="changePage(1)">&rsaquo;</span>
+            <img id="modal-img" src="" alt="封面系列大图">
+            <div class="page-tip"><span id="currentPage">1</span> / <span id="totalPage">8</span></div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>联系邮箱：xxx@shturl.</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
